@@ -12,9 +12,14 @@ export default function manageBand (state = {
   // bands: [{text: "manual input here"}]
 }, action){
   switch(action.type){
-  
-    default:
+    //We set our action.type to "ADD_BAND" in BandInput
+    case "ADD_BAND":
+      counter++;
+      action.band["id"] = counter;
+      // returning an object with bands as a key.
+      return { bands: state.bands.concat(action.band) };
 
+    default:
       return state
   }
 

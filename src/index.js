@@ -26,4 +26,8 @@ function render(){
 
 // We are exporting the wrapped ReactDom Function method so it can be used
 // in our createStore.js file.
+
+
 export const renderer = { render: render };
+
+store.dispatch({ type: 'start' });

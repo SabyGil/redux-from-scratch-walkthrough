@@ -9,6 +9,7 @@ class App extends Component{
   render(){
     return(
       <div>
+      <h1>Enter a name of a band</h1>
         <BandInput store={this.props.store} />
         <Bands store={this.props.store} />
       </div>

@@ -6,7 +6,7 @@ class Band extends Component {
   render(){
     return(
       <div>
-      {/* incoming band should have a Delete button which uses dispatch */}
+        <li>{this.props.band.text}</li>
       </div>
     )
   }

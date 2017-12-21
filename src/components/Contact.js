@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 
 
-class Band extends Component {
+class Contact extends Component {
   handleClick(e){
     e.preventDefault();
-    this.props.store.dispatch({
-      type: 'DELETE_BAND',
-      id: this.props.band.id
+    this.props.store2.dispatch({
+      name: 'DELETE_BAND',
+      contact: this.props.contact.name
     });
   }
   render(){
     return(
       <div>
-        <li>{this.props.band.text}</li>
+        <li>{this.props.contact.name}</li>
         <button onClick={ (event) => this.handleClick(event) }>Delete</button>
       </div>
     );
   }
 }
 
-export default Band;
+export default Contact;

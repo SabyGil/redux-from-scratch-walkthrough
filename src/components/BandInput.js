@@ -21,10 +21,16 @@ class BandInput extends Component{
 // to change our state. We are sending in the tyoe and then the band data as an object.
 handleOnSubmit(e){
   e.preventDefault();
-
+  this.props.store.dispatch({
+    type: 'ADD_BAND',
+    band: {
+      text: this.state.text,
+    },
+  });
 
 }
   render(){
+    debugger
     return(
       <div>
       <form onSubmit={(event) => this.handleOnSubmit(event)}>

@@ -5,7 +5,7 @@
 
 //counter is just for the unique ID for our Delete case.
 let counter = 0
-export default function manageBand (state = {
+export default function manageContacts (state = {
   bands: []
 
   // We can enter manual information into our state like below.
